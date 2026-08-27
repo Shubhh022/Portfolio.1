@@ -4,3 +4,15 @@ body {
     color: white;
     font-family: Arial, sans-serif;
 }
+
+
+.intro {
+    margin-top: 30vh;
+    margin-left: 5%;
+}
+
+
+.intro h1 {
+    font-size: 50px;
+    margin: 10px 0;
+}
