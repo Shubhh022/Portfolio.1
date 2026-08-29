@@ -34,6 +34,7 @@ body {
     height: 100%;
     background-color: white;
     left: 50%;
+    transform: translateX(-50%);
 }
 .backbone-item {
     width: 70px;
@@ -48,4 +49,8 @@ body {
 .backbone-item a {
     color: white;
     text-decoration: none;
+    margin: 20px 0;
+}
+.backbone-item:hover {
+    transform: scale(1.1);
 }
