@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 .intro {
     margin-top: 30vh;
     margin-left: 5%;
@@ -22,4 +23,29 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    position: relative;
+}
+
+
+.backbone::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    left: 50%;
+}
+.backbone-item {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backbone-item a {
+    color: white;
+    text-decoration: none;
 }
