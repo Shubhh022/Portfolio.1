@@ -26,31 +26,70 @@ body {
     position: relative;
 }
 
-
-.backbone::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 100%;
-    background-color: white;
-    left: 50%;
-    transform: translateX(-50%);
+.backbone::before { 
+    content: ""; 
+    position: absolute; 
+    width: 2px; 
+    height: 100%; 
+    background-color: white; 
+    left: 50%; 
+    transform: translateX(-50%); 
 }
-.backbone-item {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid white;
 
-    display: flex;
-    align-items: center;
+
+.backbone-item { 
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    border: 2px solid white; 
+ 
+    display: flex; 
+    align-items: center; 
     justify-content: center;
-}
-.backbone-item a {
-    color: white;
-    text-decoration: none;
+
     margin: 20px 0;
+
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px white;
+    background-color: #050505; 
 }
-.backbone-item:hover {
-    transform: scale(1.1);
+
+
+.backbone-item a { 
+    color: white; 
+    text-decoration: none; 
+}
+
+
+/* .backbone-item:hover { 
+    transform: scale(1.1); 
+} */
+.backbone-item:nth-child(1) {
+    transform: translateX(80px);
+}
+.backbone-item:nth-child(2) {
+    transform: translateX(-80px);
+}
+.backbone-item:nth-child(3) {
+    transform: translateX(80px);
+}
+.backbone-item:nth-child(4) {
+    transform: translateX(-80px);
+}
+.backbone-item:nth-child(5) {
+    transform: translateX(80px);
+}
+.backbone-item:nth-child(6) {
+    transform: translateX(-80px);
+}
+.backbone-item:nth-child(7) {
+    transform: translateX(80px);
+}
+
+.backbone-item:nth-child(odd):hover {
+    transform: translateX(80px) scale(1.1);
+}
+
+.backbone-item:nth-child(even):hover {
+    transform: translateX(-80px) scale(1.1);
 }
