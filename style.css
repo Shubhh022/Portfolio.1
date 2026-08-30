@@ -26,14 +26,18 @@ body {
     position: relative;
 }
 
-.backbone::before { 
-    content: ""; 
-    position: absolute; 
-    width: 2px; 
-    height: 100%; 
-    background-color: white; 
-    left: 50%; 
-    transform: translateX(-50%); 
+.backbone::before {
+    content: "";
+    position: absolute;
+
+    width: 450px;
+    height: 100%;
+
+    border-left: 2px solid white;
+    border-radius: 50%;
+
+    left: 58%;
+    transform: translateX(-50%);
 }
 
 
@@ -52,6 +56,7 @@ body {
     transition: transform 0.3s ease;
     box-shadow: 0 0 15px white;
     background-color: #050505; 
+     transform: translateX(var(--position));
 }
 
 
@@ -65,25 +70,31 @@ body {
     transform: scale(1.1); 
 } */
 .backbone-item:nth-child(1) {
-    transform: translateX(80px);
+    --position: 100px;
 }
+
 .backbone-item:nth-child(2) {
-    transform: translateX(-80px);
+    --position: -70px;
 }
+
 .backbone-item:nth-child(3) {
-    transform: translateX(80px);
+    --position: 40px;
 }
+
 .backbone-item:nth-child(4) {
-    transform: translateX(-80px);
+    --position: -100px;
 }
+
 .backbone-item:nth-child(5) {
-    transform: translateX(80px);
+    --position: 70px;
 }
+
 .backbone-item:nth-child(6) {
-    transform: translateX(-80px);
+    --position: -40px;
 }
+
 .backbone-item:nth-child(7) {
-    transform: translateX(80px);
+    --position: 100px;
 }
 
 .backbone-item:nth-child(odd):hover {
