@@ -46,6 +46,7 @@
 
         <!-- Portfolio Navigation -->
         <nav class="backbone">
+            <canvas id="backboneCanvas"></canvas>
 
             <section class="backbone-item">
                 <a href="#profile">Profile</a>
@@ -154,7 +155,95 @@
         </section>
 
     </main>
+<script>
 
+const canvas = document.getElementById("backboneCanvas");
+const ctx = canvas.getContext("2d");
+
+function drawBackbone() {
+
+    const backbone = document.querySelector(".backbone");
+    const items = document.querySelectorAll(".backbone-item");
+
+    canvas.width = backbone.offsetWidth;
+    canvas.height = backbone.offsetHeight;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 2;
+
+    for (let i = 0; i < items.length - 1; i++) {
+
+        const first = items[i].getBoundingClientRect();
+        const second = items[i + 1].getBoundingClientRect();
+
+        const backboneRect = backbone.getBoundingClientRect();
+
+        const firstX =
+    first.left + first.width / 2 - backboneRect.left;
+
+const firstY =
+    first.top + first.height / 2 - backboneRect.top;
+
+const secondX =
+    second.left + second.width / 2 - backboneRect.left;
+
+const secondY =
+    second.top + second.height / 2 - backboneRect.top;
+
+
+const dx = secondX - firstX;
+const dy = secondY - firstY;
+
+const distance = Math.sqrt(dx * dx + dy * dy);
+
+
+const directionX = dx / distance;
+const directionY = dy / distance;
+
+
+const firstRadius = first.width / 2;
+const secondRadius = second.width / 2;
+
+
+const startX = firstX + directionX * firstRadius;
+const startY = firstY + directionY * firstRadius;
+
+
+const endX = secondX - directionX * secondRadius;
+const endY = secondY - directionY * secondRadius;
+
+        const middleX = (startX + endX) / 2;
+
+        let curveAmount;
+
+       if (i % 2 === 0) {
+    curveAmount = 100;
+} else {
+    curveAmount = -100;
+}
+
+        ctx.beginPath();
+
+        ctx.moveTo(startX, startY);
+
+        ctx.quadraticCurveTo(
+            middleX + curveAmount,
+            (startY + endY) / 2,
+            endX,
+            endY
+        );
+
+        ctx.stroke();
+    }
+}
+
+drawBackbone();
+
+window.addEventListener("resize", drawBackbone);
+
+</script>
 </body>
 
 </html>
