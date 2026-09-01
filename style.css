@@ -52,9 +52,7 @@ body {
 }
 
 
-/* .backbone-item:hover { 
-    transform: scale(1.1); 
-} */
+
 .backbone-item:nth-child(1) {
     --position: 100px;
 }
@@ -105,4 +103,83 @@ body {
 .backbone-item {
     position: relative;
     z-index: 1;
+}
+
+#profile-toggle {
+    display: none;
+}
+
+
+
+.backbone-item label {
+    cursor: pointer;
+}
+
+
+
+.profile-popup {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+
+
+.profile-content {
+    width: 60%;
+    padding: 50px;
+
+    border: 1px solid white;
+    border-radius: 20px;
+
+    text-align: center;
+
+    background-color: #050505;
+
+    transform: translateY(50px);
+
+    transition: 0.4s;
+}
+
+
+
+#profile-toggle:checked + .profile-popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#profile-toggle:checked + .profile-popup .profile-content {
+    transform: translateY(0);
+}
+
+
+
+.close-button {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+.profile-popup {
+    z-index: 10;
 }

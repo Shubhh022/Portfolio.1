@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Portfolio</title>
@@ -13,127 +13,144 @@
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h2>PORTFOLIO</h2>
-        <p>Drag to Rotate • Explore My Portfolio</p>
-    </header>
+<header>
+    <h2>PORTFOLIO</h2>
+    <p>Drag to Rotate • Explore My Portfolio</p>
+</header>
 
 
-    <!-- Main Portfolio -->
-    <main>
+<main>
 
-        <!-- Introduction -->
-        <section class="intro">
+    <!-- INTRODUCTION -->
 
-            <h2>HI, I'M</h2>
+    <section class="intro">
 
-            <h1>SHUBHAM KUMAR</h1>
+        <h2>HI, I'M</h2>
 
-            <p>CSE Student | Developer</p>
-            <p>Problem Solver | Tech Enthusiast</p>
+        <h1>SHUBHAM KUMAR</h1>
 
-            <!-- Social Links -->
-            <div>
-                <a href="#">GitHub</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">Email</a>
-            </div>
+        <p>CSE Student | Developer</p>
+
+        <p>Problem Solver | Tech Enthusiast</p>
+
+        <div>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Email</a>
+        </div>
+
+    </section>
+
+
+    <!-- BACKBONE -->
+
+    <nav class="backbone">
+
+        <canvas id="backboneCanvas"></canvas>
+
+
+        <!-- PROFILE -->
+
+        <section class="backbone-item">
+
+            <label for="profile-toggle">
+                Profile
+            </label>
 
         </section>
 
 
-        <!-- Portfolio Navigation -->
-        <nav class="backbone">
-            <canvas id="backboneCanvas"></canvas>
+        <!-- SKILLS -->
 
-            <section class="backbone-item">
-                <a href="#profile">Profile</a>
-            </section>
+        <section class="backbone-item">
 
-            <section class="backbone-item">
-                <a href="#skills">Skills</a>
-            </section>
+            <a href="#skills">
+                Skills
+            </a>
 
-            <section class="backbone-item">
-                <a href="#projects">Projects</a>
-            </section>
-
-            <section class="backbone-item">
-                <a href="#achievements">Achievements</a>
-            </section>
-
-            <section class="backbone-item">
-                <a href="#certifications">Certifications</a>
-            </section>
-
-            <section class="backbone-item">
-                <a href="#resume">Resume</a>
-            </section>
-
-            <section class="backbone-item">
-                <a href="#contact">Contact</a>
-            </section>
-
-        </nav>
-
-
-        <!-- Profile -->
-        <section id="profile">
-            <h2>Profile</h2>
-            <p>My profile and personal journey.</p>
         </section>
 
 
-        <!-- Skills -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <p>My technical skills and technologies.</p>
+        <!-- PROJECTS -->
+
+        <section class="backbone-item">
+
+            <a href="#projects">
+                Projects
+            </a>
+
         </section>
 
 
-        <!-- Projects -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>My projects and work.</p>
+        <!-- ACHIEVEMENTS -->
+
+        <section class="backbone-item">
+
+            <a href="#achievements">
+                Achievements
+            </a>
+
         </section>
 
 
-        <!-- Achievements -->
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <p>My achievements and milestones.</p>
+        <!-- CERTIFICATIONS -->
+
+        <section class="backbone-item">
+
+            <a href="#certifications">
+                Certifications
+            </a>
+
         </section>
 
 
-        <!-- Certifications -->
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <p>My certifications and courses.</p>
+        <!-- RESUME -->
+
+        <section class="backbone-item">
+
+            <a href="#resume">
+                Resume
+            </a>
+
         </section>
 
 
-        <!-- Resume -->
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>My professional resume.</p>
+        <!-- CONTACT -->
+
+        <section class="backbone-item">
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </section>
 
-
-        <!-- Contact -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>How to get in touch with me.</p>
-        </section>
+    </nav>
 
 
-        <!-- About Me -->
-        <section>
+    <!-- PROFILE POPUP -->
+
+    <input type="checkbox" id="profile-toggle">
+
+
+    <div class="profile-popup">
+
+        <div class="profile-content">
+
+
+            <!-- CLOSE BUTTON -->
+
+            <label for="profile-toggle" class="close-button">
+                ×
+            </label>
+
+
+            <!-- PROFILE INFORMATION -->
 
             <h2>ABOUT ME</h2>
 
-            <h2>Hi, I'm SHUBHAM KUMAR</h2>
+            <h1>HI, I'M SHUBHAM KUMAR</h1>
 
             <p>
                 I'm a Computer Science Engineering student
@@ -141,109 +158,205 @@
                 and user-friendly web experiences.
             </p>
 
-            <hr>
 
-            <ul>
-                <li>AGE: 19</li>
-                <li>LOCATION: India Uttar Pradesh, Greater Noida</li>
-                <li>EDUCATION: B.Tech CSE</li>
-                <li>INTERESTS: Web Development, DSA</li>
-            </ul>
+            <p>
+                AGE: 19<br>
+                EDUCATION: B.Tech CSE<br>
+                INTERESTS: Web Development, DSA
+            </p>
 
-            <button>MORE ABOUT ME</button>
+        </div>
 
-        </section>
+    </div>
 
-    </main>
+
+</main>
+
+
+<!-- BACKBONE CURVE SCRIPT -->
+
 <script>
 
-const canvas = document.getElementById("backboneCanvas");
-const ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("backboneCanvas");
 
-function drawBackbone() {
-
-    const backbone = document.querySelector(".backbone");
-    const items = document.querySelectorAll(".backbone-item");
-
-    canvas.width = backbone.offsetWidth;
-    canvas.height = backbone.offsetHeight;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    ctx.strokeStyle = "white";
-    ctx.lineWidth = 2;
-
-    for (let i = 0; i < items.length - 1; i++) {
-
-        const first = items[i].getBoundingClientRect();
-        const second = items[i + 1].getBoundingClientRect();
-
-        const backboneRect = backbone.getBoundingClientRect();
-
-        const firstX =
-    first.left + first.width / 2 - backboneRect.left;
-
-const firstY =
-    first.top + first.height / 2 - backboneRect.top;
-
-const secondX =
-    second.left + second.width / 2 - backboneRect.left;
-
-const secondY =
-    second.top + second.height / 2 - backboneRect.top;
+    const ctx = canvas.getContext("2d");
 
 
-const dx = secondX - firstX;
-const dy = secondY - firstY;
+    function drawBackbone() {
 
-const distance = Math.sqrt(dx * dx + dy * dy);
+        const backbone =
+            document.querySelector(".backbone");
 
-
-const directionX = dx / distance;
-const directionY = dy / distance;
-
-
-const firstRadius = first.width / 2;
-const secondRadius = second.width / 2;
+        const items =
+            document.querySelectorAll(".backbone-item");
 
 
-const startX = firstX + directionX * firstRadius;
-const startY = firstY + directionY * firstRadius;
+        canvas.width = backbone.offsetWidth;
+
+        canvas.height = backbone.offsetHeight;
 
 
-const endX = secondX - directionX * secondRadius;
-const endY = secondY - directionY * secondRadius;
-
-        const middleX = (startX + endX) / 2;
-
-        let curveAmount;
-
-       if (i % 2 === 0) {
-    curveAmount = 100;
-} else {
-    curveAmount = -100;
-}
-
-        ctx.beginPath();
-
-        ctx.moveTo(startX, startY);
-
-        ctx.quadraticCurveTo(
-            middleX + curveAmount,
-            (startY + endY) / 2,
-            endX,
-            endY
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
         );
 
-        ctx.stroke();
+
+        ctx.strokeStyle = "white";
+
+        ctx.lineWidth = 2;
+
+
+        for (let i = 0; i < items.length - 1; i++) {
+
+
+            const first =
+                items[i].getBoundingClientRect();
+
+
+            const second =
+                items[i + 1].getBoundingClientRect();
+
+
+            const backboneRect =
+                backbone.getBoundingClientRect();
+
+
+            const firstX =
+                first.left +
+                first.width / 2 -
+                backboneRect.left;
+
+
+            const firstY =
+                first.top +
+                first.height / 2 -
+                backboneRect.top;
+
+
+            const secondX =
+                second.left +
+                second.width / 2 -
+                backboneRect.left;
+
+
+            const secondY =
+                second.top +
+                second.height / 2 -
+                backboneRect.top;
+
+
+            const dx =
+                secondX - firstX;
+
+
+            const dy =
+                secondY - firstY;
+
+
+            const distance =
+                Math.sqrt(
+                    dx * dx +
+                    dy * dy
+                );
+
+
+            const directionX =
+                dx / distance;
+
+
+            const directionY =
+                dy / distance;
+
+
+            const firstRadius =
+                first.width / 2;
+
+
+            const secondRadius =
+                second.width / 2;
+
+
+            const startX =
+                firstX +
+                directionX * firstRadius;
+
+
+            const startY =
+                firstY +
+                directionY * firstRadius;
+
+
+            const endX =
+                secondX -
+                directionX * secondRadius;
+
+
+            const endY =
+                secondY -
+                directionY * secondRadius;
+
+
+            const middleX =
+                (startX + endX) / 2;
+
+
+            let curveAmount;
+
+
+            if (i % 2 === 0) {
+
+                curveAmount = 100;
+
+            } else {
+
+                curveAmount = -100;
+
+            }
+
+
+            ctx.beginPath();
+
+
+            ctx.moveTo(
+                startX,
+                startY
+            );
+
+
+            ctx.quadraticCurveTo(
+
+                middleX + curveAmount,
+
+                (startY + endY) / 2,
+
+                endX,
+
+                endY
+
+            );
+
+
+            ctx.stroke();
+
+        }
+
     }
-}
 
-drawBackbone();
 
-window.addEventListener("resize", drawBackbone);
+    drawBackbone();
+
+
+    window.addEventListener(
+        "resize",
+        drawBackbone
+    );
 
 </script>
+
+
 </body>
 
 </html>
