@@ -451,3 +451,44 @@ body {
     color: white;
     text-decoration: none;
 }
+.contact {
+    margin-top: 150px;
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid white;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.contact-links {
+    margin-top: 30px;
+}
+
+.contact-links a {
+    display: inline-block;
+
+    margin: 10px;
+    padding: 12px 25px;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px white;
+}
