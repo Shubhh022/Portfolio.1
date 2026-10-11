@@ -211,7 +211,7 @@ body {
 }
 
 .skills-content {
-    width: 60%;
+    width: 70%;
     padding: 50px;
 
     border: 1px solid white;
@@ -247,7 +247,7 @@ body {
     width: 100%;
     height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(61, 31, 31, 0.8);
 
     display: flex;
     align-items: center;
