@@ -664,7 +664,7 @@ body {
 }
 
 .backbone-item:hover {
-    border-color: white;
+    border-color: rgb(195, 189, 189);
     box-shadow:
         0 0 18px rgba(255, 255, 255, 0.6),
         0 0 35px rgba(255, 255, 255, 0.15),
@@ -688,7 +688,7 @@ body {
 
     .intro {
         margin-top: 15vh;
-        margin-left: 5%;
+        margin-left: 6%;
         margin-right: 5%;
     }
 
@@ -767,7 +767,7 @@ body {
 
     border: 1px solid white;
     border-radius: 50%;
-    background: #050505;
+    background: #501919;
     color: white;
 
     font-size: 25px;
